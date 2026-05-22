@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Events: Canberra Modern</title>
+<meta name="description" content="Upcoming and past events from Canberra Modern: tours, talks, symposiums, and workshops celebrating Canberra's modernist heritage." />
+<link rel="stylesheet" href="../assets/css/styles.css" />
+<script src="../assets/js/script.js" defer></script>
+</head>
+<body>
+
+<a class="skip-link" href="#content">Skip to main content</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="index.html" class="brand" aria-label="Canberra Modern home">CANBERRA MODERN</a>
+    <nav class="nav-primary" aria-label="Primary">
+      <ul class="nav-primary__list">
+        <li><a class="nav-primary__link" href="events.html" aria-current="page">Events</a></li>
+        <li><a class="nav-primary__link" href="explore.html">Explore</a></li>
+        <li><a class="nav-primary__link" href="stories.html">Stories</a></li>
+        <li><a class="nav-primary__link" href="get-involved.html">Get involved</a></li>
+        <li><a class="nav-primary__link" href="about.html">About</a></li>
+      </ul>
+      <a class="btn btn--strong" href="get-involved.html#subscribe">Subscribe</a>
+    </nav>
+    <button class="menu-button" type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+      <img src="../assets/icons/menu-burger.svg" alt="" aria-hidden="true" />
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu" data-menu aria-hidden="true">
+  <div class="mobile-menu__top">
+    <span class="brand">CANBERRA MODERN</span>
+    <button class="mobile-menu__close" type="button" data-menu-close aria-label="Close menu">
+      <img src="../assets/icons/menu-close.svg" alt="" aria-hidden="true" />
+    </button>
+  </div>
+  <ul class="mobile-menu__list">
+    <li><a class="mobile-menu__link" href="events.html" aria-current="page">Events</a></li>
+    <li><a class="mobile-menu__link" href="explore.html">Explore</a></li>
+    <li><a class="mobile-menu__link" href="stories.html">Stories</a></li>
+    <li><a class="mobile-menu__link" href="get-involved.html">Get involved</a></li>
+    <li><a class="mobile-menu__link" href="about.html">About</a></li>
+  </ul>
+  <a class="btn btn--strong mobile-menu__cta" href="get-involved.html#subscribe">Subscribe</a>
+</div>
+
+<main id="content">
+<section class="section section--page-tone section--flush" aria-labelledby="events-title">
+  <div class="container">
+    <div class="hero-events">
+      <div class="hero-events__left">
+        <p class="hero-events__eyebrow">Season 2026 &middot; Canberra</p>
+        <h1 id="events-title" class="hero-events__title">The
+<em class="hero-accent">Social</em>
+Scale.</h1>
+      </div>
+      <div class="hero-events__right">
+        <p class="hero-events__desc">Walks, talks, interiors, and sketch days built around Canberra's mid-century architectural heritage.</p>
+        <p class="hero-text__hint">Current Season</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--snug" aria-labelledby="filters">
+  <div class="container">
+    <h2 id="filters" class="sr-only">Filter events</h2>
+
+    <div class="toggle-rail">
+      <div class="toggle-filter" role="group" aria-label="Time filter" data-toggle-group data-toggle-target="#events-grid">
+        <button type="button" data-toggle="upcoming" aria-pressed="true">Upcoming</button>
+        <button type="button" data-toggle="past" aria-pressed="false">Past Events</button>
+      </div>
+      <div class="chips" role="group" aria-label="Category filter" data-filter-group data-filter-target=".event-card">
+        <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="chip" type="button" data-filter="tour" aria-pressed="false">Architectural Tours</button>
+        <button class="chip" type="button" data-filter="symposium" aria-pressed="false">Symposiums</button>
+        <button class="chip" type="button" data-filter="film" aria-pressed="false">Film</button>
+        <button class="chip" type="button" data-filter="workshop" aria-pressed="false">Workshops</button>
+      </div>
+    </div>
+
+    <div class="card-grid u-mt-5" id="events-grid">
+
+      <article class="card card--event event-card" data-cat="tour" data-state="upcoming">
+        <div class="card__media">
+          <img src="../assets/images/event-shine-dome.png" alt="The Shine Dome's blue-grey curved roof at dusk." />
+          <span class="tag tag--tour">Tour</span>
+        </div>
+        <div class="card__body">
+          <p class="card__eyebrow">NOV 2 &middot; 18:30 &middot; Acton</p>
+          <h3 class="card__title">The Shine Dome Nocturne</h3>
+          <p class="card__desc">A rare evening tour inside Australia's Academy of Science, with curatorial talks by the conservation team.</p>
+          <div class="card__actions">
+            <a class="btn btn--strong btn--full-mobile" href="event-detail.html">Book Now</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card card--event event-card" data-cat="symposium" data-state="upcoming">
+        <div class="card__media">
+          <img src="../assets/images/event-seidler-legacy.png" alt="Mid-century modernist Canberra building exterior with white concrete fins." />
+          <span class="tag tag--spotlight">Talk</span>
+        </div>
+        <div class="card__body">
+          <p class="card__eyebrow">NOV 15 &middot; 10:00 &middot; Manuka</p>
+          <h3 class="card__title">Post-War Suburbia Symposium</h3>
+          <p class="card__desc">A panel of architects, residents, and historians on the 1960s suburbs and what is at risk.</p>
+          <div class="card__actions">
+            <a class="btn btn--strong btn--full-mobile" href="event-detail.html">Register</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card card--event event-card" data-cat="workshop" data-state="upcoming">
+        <div class="card__media">
+          <img src="../assets/images/event-brutalist-sketch-club.png" alt="Concrete brutalist facade near Lake Burley Griffin." />
+          <span class="tag tag--tour">Workshop</span>
+        </div>
+        <div class="card__body">
+          <p class="card__eyebrow">NOV 22 &middot; 13:00 &middot; Lake Burley Griffin</p>
+          <h3 class="card__title">Brutalist Sketch Club</h3>
+          <p class="card__desc">Bring a pencil and a folding stool. Three hours of guided sketching across the lakeside campus.</p>
+          <div class="card__actions">
+            <a class="btn btn--strong btn--full-mobile" href="event-detail.html">Book a Spot</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card card--event event-card" data-cat="film" data-state="upcoming">
+        <div class="card__media">
+          <img src="../assets/images/living-modernism.png" alt="Interior of a modernist Canberra residence." />
+          <span class="tag tag--video">Film</span>
+        </div>
+        <div class="card__body">
+          <p class="card__eyebrow">DEC 5 &middot; 19:30 &middot; Civic</p>
+          <h3 class="card__title">Living in Modernism: Screening</h3>
+          <p class="card__desc">A public premiere of the new short-film series, followed by a Q&amp;A with the director.</p>
+          <div class="card__actions">
+            <a class="btn btn--strong btn--full-mobile" href="event-detail.html">Book Now</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card card--event event-card" data-cat="tour" data-state="upcoming">
+        <div class="card__media">
+          <img src="../assets/images/place-shine-dome-wide.png" alt="Wide view of a curved concrete cultural building in Canberra." />
+          <span class="tag tag--tour">Tour</span>
+        </div>
+        <div class="card__body">
+          <p class="card__eyebrow">DEC 12 &middot; 09:30 &middot; Civic</p>
+          <h3 class="card__title">Civic Modern Walk</h3>
+          <p class="card__desc">A two-hour guided walk through Civic's commercial modernism, from Sydney Building to Garema Place.</p>
+          <div class="card__actions">
+            <a class="btn btn--strong btn--full-mobile" href="event-detail.html">Book Now</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card card--event event-card" data-cat="symposium" data-state="past">
+        <div class="card__media">
+          <img src="../assets/images/story-concrete-icons.png" alt="A concrete sculptural element of a modernist Canberra building." />
+          <span class="tag tag--past">Past</span>
+        </div>
+        <div class="card__body">
+          <p class="card__eyebrow">JUL 4 &middot; 10:00 &middot; Canberra</p>
+          <h3 class="card__title">The Architects of the Capital</h3>
+          <p class="card__desc">A daylong symposium archiving the lesser-known architects who shaped 1960s Canberra.</p>
+          <div class="card__actions">
+            <a class="link-arrow link-arrow--ink" href="event-detail.html">Read Recap <span class="arrow" aria-hidden="true">&#x2197;</span></a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="archived-perspectives" aria-labelledby="archived">
+  <div class="container">
+    <div class="archived-perspectives__inner">
+      <div>
+        <h2 id="archived" class="archived-perspectives__heading">Archived Perspectives</h2>
+        <p class="archived-perspectives__desc">Past events, symposiums, photography, and recordings from our previous seasons.</p>
+      </div>
+      <button class="btn btn--ghost" type="button" data-show-past>View Past Events</button>
+    </div>
+  </div>
+</section>
+
+<section class="membership" aria-labelledby="advocate">
+  <div class="membership__pattern" aria-hidden="true"></div>
+  <div class="container">
+    <div class="membership__inner">
+      <h2 id="advocate" class="membership__title">Become a
+Modern
+Advocate.</h2>
+      <div>
+        <p class="membership__body-text">Join our community of conservationists and enthusiasts. Members receive priority booking and access to the Closed Doors programme.</p>
+        <a class="btn btn--on-dark" href="get-involved.html#support">Join Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__grid">
+      <div>
+        <p class="site-footer__brand">CANBERRA MODERN</p>
+        <p class="site-footer__tagline">Advocating for the conservation and celebration of Canberra's unique modernist heritage through education, participation, and events.</p>
+      </div>
+      <div>
+        <p class="site-footer__heading">Quick Links</p>
+        <ul class="site-footer__links">
+          <li><a href="events.html">Events</a></li>
+          <li><a href="explore.html">Explore</a></li>
+          <li><a href="stories.html">Stories</a></li>
+          <li><a href="get-involved.html">Get involved</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="site-footer__heading">Social</p>
+        <ul class="site-footer__links">
+          <li><a href="#" aria-label="Canberra Modern on Instagram (coming soon)">Instagram</a></li>
+          <li><a href="#" aria-label="Canberra Modern on Facebook (coming soon)">Facebook</a></li>
+          <li><a href="#" aria-label="Canberra Modern on Twitter (coming soon)">Twitter</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="site-footer__heading">Stay Informed</p>
+        <form class="site-footer__form" data-subscribe-form novalidate>
+          <label class="sr-only" for="footer-email">Email address</label>
+          <input id="footer-email" type="email" required placeholder="EMAIL ADDRESS" />
+          <button class="btn btn--primary" type="submit">Subscribe</button>
+          <p class="form-feedback" data-form-feedback role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      This website was produced by students in the Faculty of Arts &amp; Design, University of Canberra, 2026.
+    </div>
+  </div>
+</footer>
+</body>
+</html>
