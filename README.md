@@ -41,6 +41,10 @@ The site is structured around the main ways a user might engage with Canberra Mo
 
 The main journeys connect across pages. A user can move from Home to Events, then to Event Detail and booking. Another user can move from Explore to Place Detail, then to support. Stories supports learning, while Get Involved turns interest into participation. About supports trust and contact.
 
+A single-page or homepage-heavy structure was an option early in planning. Placing events, places, and stories on one long page would have been simpler to build, but it would have forced different user intents into the same space. A user who wants to book an event has a different goal from a user who wants to browse buildings or read a story. Mixing those tasks reduces clarity for all of them. Giving each task its own page means the navigation reflects actual user goals rather than an internal content inventory. This is a user-centred design decision: the site is organised around what users are trying to do, not around what the organisation wants to display.
+
+The separation of Stories from Explore was also deliberate. Both involve content about modernist buildings and history, but they serve different intents. Explore supports discovery and decision-making: users browse, filter, and link through to a specific place. Stories supports slower engagement through video, news, and self-guided tours. Combining them would have made it harder to design either page well because the interaction patterns are different. Catalogue browsing and editorial reading need different layouts, content rhythms, and calls to action. Keeping them separate let each page have a clearer purpose.
+
 This structure links to user-centred design because the site is organised around user goals rather than internal organisational categories. Users can move from discovery to action through clear pathways, such as Home to Events to booking, or Explore to Place Detail to support. It also links to usability and consistency. Nielsen’s consistency and standards heuristic states that “users should not have to wonder whether different words, situations, or actions mean the same thing” (Nielsen, 2024). I applied this by keeping the navigation, footer, card structure, active states, tags, and CTAs consistent across the site.
 
 ## Design direction
@@ -49,13 +53,15 @@ The visual direction is modernist and editorial. I used large bold headings, str
 
 The warm off-white background was chosen to feel closer to paper than a pure digital white. This supports the editorial tone and gives the photography more weight. The typography uses Inter for both headings and body copy. Large uppercase headings establish page identity, while smaller metadata, tags, and descriptions support scanning.
 
-Visual hierarchy was a major design concern. The site has many types of information, including dates, locations, categories, prices, stories, and campaign actions. I used scale, weight, spacing, colour, and card structure to help users understand what to read first. For example, the homepage gives the flagship event a large hero treatment, while secondary events use a tighter row pattern.
+Visual hierarchy was a major design concern. The site contains many information types: dates, locations, categories, prices, stories, and campaign actions. Without a deliberate hierarchy, a page with this much content risks being hard to scan. My approach was to treat each information level differently. Large headings orient users to what a page is about. Tags and metadata give quick category context before users commit to reading. CTAs signal the available action at each stage of a journey. The colour palette reinforces this structure: red for strong transactional actions such as booking, yellow for status tags such as at-risk or spotlight, and neutral text for supporting detail. Colour is used as a hierarchy and status tool rather than decoration.
+
+The trade-off was between expressive visual weight and readability across screen sizes. A modernist editorial style favours strong typographic statements, but those same large headings can become unwieldy on a small screen. I had to ensure the hierarchy worked at mobile widths, not only in the desktop Figma frames. On mobile, display headings use `clamp()` sizing and some sections reduce visual complexity that the desktop layout can support. The goal was to guide users from broad page orientation to specific action at every screen size. Scannability had to be maintained on mobile even when the grid collapsed to a single column.
 
 The image treatment is direct and architectural. Many event and story images use black-and-white or high-contrast styling, while hero images and place images carry more visual weight. This creates a consistent editorial feel and keeps attention on the buildings.
 
-The accent palette uses red, pink, blue, teal, and yellow. Red is used for strong actions such as booking. Pink appears in active states and accents. Blue and teal support darker sections and secondary actions. Yellow is used for spotlight and at-risk tags. I used colour as a hierarchy and status tool, not only as decoration.
+The accent palette uses red, pink, blue, teal, and yellow. Red is used for strong actions such as booking. Pink appears in active states and accents. Blue and teal support darker sections and secondary actions. Yellow is used for spotlight and at-risk tags.
 
-Cards are central to the design system because they support scannability. Event cards, place cards, and story cards share a repeated structure with image, tag, title, description, and action. Tags provide quick category recognition, while CTAs such as Book Now, Browse places, Subscribe, and Support Now give clear next steps. This supports affordance because users can identify what is clickable and what action each section is asking for.
+Cards are central to the design system because they support scannability. Event cards, place cards, and story cards share a repeated structure with image, tag, title, description, and action. Tags provide quick category recognition before users read the full card. Button styles, arrow links, and labelled CTAs serve as signifiers: each communicates what it does and what will happen when a user acts on it. This is an affordance decision. Interactive elements need to signal their function visually before a user commits to an action, so the treatment of buttons, links, and tags had to be consistent and legible across every page.
 
 ## Development process
 
@@ -63,7 +69,7 @@ The development process started with translating the Figma design into static HT
 
 The biggest development challenge was converting fixed Figma layouts into flexible browser layouts. A Figma frame can be carefully arranged at one width, but a website has to adapt to many screen sizes, text wraps, image crops, and interaction states. During development, some layouts that worked visually in Figma had to be rebuilt with CSS Grid, Flexbox, media queries, and `clamp()` so they could behave properly on tablet and mobile.
 
-I created reusable systems for cards, tags, buttons, forms, hero sections, CTA bands, grids, and the footer. This reduced repetition and made the site easier to extend. It also supported consistency, which is a key usability principle because users benefit from repeated patterns and predictable behaviour (Nielsen, 2024).
+I created reusable systems for cards, tags, buttons, forms, hero sections, CTA bands, grids, and the footer. This reduced repetition and made the site easier to extend. It also supported consistency, which is a key usability principle because users benefit from repeated patterns and predictable behaviour.
 
 I tested in live preview throughout the build rather than waiting until the end. Browser testing changed several details, including heading sizes, card stacking, form layouts, horizontal chip scrolling, and mobile navigation. I used GitHub commits during development to track stable points and planned deployment through GitHub Pages.
 
@@ -81,6 +87,8 @@ The low-fi prototype also helped shape Get Involved. I considered treating volun
 
 Another important low-fi decision was the use of repeated content cards. I knew the site would contain events, places, stories, and campaigns. Sketching these as related card systems helped me plan a reusable structure before choosing colours or images.
 
+The low-fi stage did not test visual language, colour, responsive behaviour, or real user comprehension. Those decisions were deferred to the high-fi prototype and the development stage. This is a limitation of low-fi work in general: it is useful for structure and flow, but it cannot reveal how a layout will feel at different screen sizes or whether visual hierarchy will read clearly in practice.
+
 ## High-fi Figma prototype discussion
 
 ![High-fi Figma prototype screenshot](assets/images/Screen_high-fi.png)
@@ -91,7 +99,7 @@ Several parts of the final site follow the Figma prototype closely. The homepage
 
 The final coded site changed most during responsive development. Figma helped me design the desktop experience, but the browser showed where fixed layouts needed to become flexible systems. Multi-column sections became stacked layouts. Inline forms became vertical forms. Chip groups and tabs became horizontally scrollable on small screens. Large headings needed `clamp()` sizing and page-specific mobile adjustments.
 
-This was also where feedback about separating desktop and mobile prototype flows became important. The desktop prototype communicated visual direction, but it did not fully test how navigation, filters, cards, and CTAs would work on a phone. In the final build, I addressed this by adding a mobile menu, stacked content flow, mobile-friendly form layouts, and horizontal controls where space was limited. If I had more time, I would create more detailed mobile Figma frames before coding so these decisions could be tested earlier.
+Reviewing the prototype myself also made it clear that desktop and mobile flows needed to work as separate pathways. The desktop prototype communicated visual direction, but it did not fully test how navigation, filters, cards, and CTAs would work on a phone. In the final build, I addressed this by adding a mobile menu, stacked content flow, mobile-friendly form layouts, and horizontal controls where space was limited. If I had more time, I would create more detailed mobile Figma frames before coding so these decisions could be tested earlier.
 
 ## Key implementation decisions
 
@@ -125,7 +133,7 @@ The filter system uses shared state so controls can work together. On the Events
 
 The JavaScript also supports feedback. Subscribe and contact forms show error or success messages instead of failing silently. This links to usability because users need visible feedback after taking an action (Nielsen, 2024).
 
-The site is partly progressive. The core content is still written in static HTML, so users can read pages and follow normal links without JavaScript on desktop. However, enhanced features such as filtering, form feedback, and mobile menu interaction depend on JavaScript. If I developed this further, I would make the mobile navigation fallback stronger for no-JavaScript conditions.
+The site follows the principle of progressive enhancement. Core content is written in static HTML so users can read pages and follow links without JavaScript. Enhanced features such as filtering, form feedback, and mobile menu interaction layer on top of that baseline. Progressive enhancement means starting from a working content foundation and adding capability for capable environments, rather than making the site depend entirely on scripting from the start. The implementation is partial: the main gap is the mobile navigation, which has no functional fallback for users without JavaScript. A future version would address this with a CSS-only disclosure pattern or a server-side rendering approach.
 
 ### Reusable design system
 
@@ -141,7 +149,7 @@ A limitation of this system is that it needs discipline. If too many one-off pag
 
 ### What worked well
 
-The editorial modernist identity worked well. The large headings, off-white background, strong grid structure, and architectural photography feel connected to Canberra Modern's subject matter. This made the site feel more specific than a generic community organisation website.
+The editorial modernist identity held together across all eight pages. The large headings, off-white background, strong grid structure, and architectural photography suit the subject matter. More usefully, establishing this direction early in the Figma prototype gave every later decision a clear reference point. When building components, it was straightforward to judge whether a spacing choice, heading size, or image treatment belonged in the system or was breaking from it. That early commitment reduced visual inconsistency during development.
 
 The information architecture became much clearer through iteration. Separating Home and Events was especially important. Home introduces the organisation and highlights key content, while Events supports the focused task of finding and booking an event. This gives each page a purpose and reduces competition between content types.
 
@@ -159,7 +167,7 @@ Placeholder and external links need more work. Social links, the membership acti
 
 The forms are currently simulated. They provide front end validation and feedback, but a production version would need real newsletter, contact, membership, and booking integrations.
 
-I would like to run formal user testing. I tested the site myself in the browser, but I did not observe unfamiliar users completing tasks. User testing would be useful for checking whether the Explore filters, event booking pathway, and Get Involved actions are clear.
+I would like to run formal user testing. I tested the site myself in the browser, but I did not observe unfamiliar users completing tasks. This means the structural decisions, navigation pathways, and filter interactions are based on heuristic review and my own assessment rather than observed behaviour. User testing would be useful for checking whether the Explore filters, event booking pathway, and Get Involved actions are actually clear to new users.
 
 The Explore and Place Detail sections could be richer. A future version could include an interactive map, place timelines, image galleries, more detailed conservation records, and stronger links between places, stories, and campaigns.
 
