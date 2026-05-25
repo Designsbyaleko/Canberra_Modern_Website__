@@ -3032,8 +3032,9 @@ main { flex: 1 0 auto; display: block; }
   .place-hero-split__title { overflow-wrap: break-word; }
   .place-conservation__title { font-size: clamp(1.75rem, 8vw, 2.5rem); white-space: normal; }
   .place-conservation__head { flex-direction: column; align-items: flex-start; gap: 12px; }
-  .place-cta-image { min-height: 260px; }
-  .place-cta-image__title { font-size: clamp(1.5rem, 7vw, 2rem); }
+  .place-cta-image { min-height: 320px; }
+  .place-cta-image__card { width: 82%; padding: 28px 24px; }
+  .place-cta-image__title { font-size: clamp(1.375rem, 6vw, 1.75rem); }
   .home-hero .feature-card .btn { width: 100%; }
   .learning__feature-content { padding: 24px; }
   .learning__feature { min-height: 260px; }
