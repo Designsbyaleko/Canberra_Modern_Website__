@@ -502,7 +502,9 @@ main { flex: 1 0 auto; display: block; }
 .link-arrow .arrow {
   display: inline-block;
   transition: transform var(--dur) var(--ease-out);
-  width: 15px; height: 15px;
+}
+.link-arrow .arrow::after {
+  content: "\2197\FE0E";
 }
 .link-arrow:hover { letter-spacing: 0.2em; }
 .link-arrow:hover .arrow { transform: translate(2px, -2px); }
@@ -680,6 +682,7 @@ main { flex: 1 0 auto; display: block; }
   font-size: 1.25rem;
   transition: transform var(--dur) var(--ease-out);
 }
+.event-row__arrow::after { content: "\2192\FE0E"; }
 .event-row:hover .event-row__arrow,
 .event-row:focus-visible .event-row__arrow { transform: translateX(4px); }
 
@@ -2666,6 +2669,7 @@ main { flex: 1 0 auto; display: block; }
 .related-story-item__link { font-weight: var(--weight-bold); font-size: 1rem; color: var(--ink-strong); text-decoration: none; letter-spacing: var(--tracking-snug); }
 .related-story-item__link:hover { color: var(--color-red); }
 .related-story-item__arrow { font-size: 1rem; color: var(--ink-muted); }
+.related-story-item__arrow::after { content: "\2192\FE0E"; }
 .place-related__eyebrow { color: var(--color-blue); }
 
 /* Place CTA image */
