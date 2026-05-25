@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Explore: Canberra Modern</title>
+<meta name="description" content="Browse Canberra's modernist places: civic, residential, public, and at-risk." />
+<link rel="stylesheet" href="assets/css/styles.css" />
+<script src="assets/js/script.js" defer></script>
+</head>
+<body>
+
+<a class="skip-link" href="#content">Skip to main content</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="index.html" class="brand" aria-label="Canberra Modern home">CANBERRA MODERN</a>
+    <nav class="nav-primary" aria-label="Primary">
+      <ul class="nav-primary__list">
+        <li><a class="nav-primary__link" href="events.html">Events</a></li>
+        <li><a class="nav-primary__link" href="explore.html" aria-current="page">Explore</a></li>
+        <li><a class="nav-primary__link" href="stories.html">Stories</a></li>
+        <li><a class="nav-primary__link" href="get-involved.html">Get involved</a></li>
+        <li><a class="nav-primary__link" href="about.html">About</a></li>
+      </ul>
+      <a class="btn btn--strong" href="get-involved.html#subscribe">Subscribe</a>
+    </nav>
+    <button class="menu-button" type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+      <img src="assets/icons/menu-burger.svg" alt="" aria-hidden="true" />
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu" data-menu aria-hidden="true">
+  <div class="mobile-menu__top">
+    <span class="brand">CANBERRA MODERN</span>
+    <button class="mobile-menu__close" type="button" data-menu-close aria-label="Close menu">
+      <img src="assets/icons/menu-close.svg" alt="" aria-hidden="true" />
+    </button>
+  </div>
+  <ul class="mobile-menu__list">
+    <li><a class="mobile-menu__link" href="events.html">Events</a></li>
+    <li><a class="mobile-menu__link" href="explore.html" aria-current="page">Explore</a></li>
+    <li><a class="mobile-menu__link" href="stories.html">Stories</a></li>
+    <li><a class="mobile-menu__link" href="get-involved.html">Get involved</a></li>
+    <li><a class="mobile-menu__link" href="about.html">About</a></li>
+  </ul>
+  <a class="btn btn--strong mobile-menu__cta" href="get-involved.html#subscribe">Subscribe</a>
+</div>
+
+<main id="content">
+
+<section class="explore-hero">
+  <div class="explore-hero__media">
+    <img class="explore-hero__bg" src="assets/images/Canberra_Sky.jpg" alt="Aerial view of Canberra, Lake Burley Griffin, and the surrounding civic landscape." />
+  </div>
+  <div class="container explore-hero__overlay">
+    <div class="explore-hero__card">
+      <h1 class="explore-hero__title">Explore<br>the Capital's<br>Modernism.</h1>
+      <p class="explore-hero__stat">62 places mapped &middot; 8 at risk</p>
+      <p class="explore-hero__lede">A growing field guide to Canberra's twentieth-century buildings: civic, suburban, public, and sacred. Includes the stories of how they came to be and the campaigns to keep them.</p>
+      <a class="btn btn--strong" href="#browse">Browse places</a>
+    </div>
+  </div>
+</section>
+
+<section class="explore-featured section--page-tone">
+  <div class="container">
+    <article class="place-feature" aria-labelledby="featured-place">
+      <div class="place-feature__media">
+        <img src="assets\images\story-shine-dome.png" alt="The Shine Dome at golden hour: copper-blue dome reflected in the surrounding moat." />
+      </div>
+      <div class="place-feature__body">
+        <div class="place-feature__meta">
+          <span class="tag tag--spotlight">Featured &middot; At Risk</span>
+          <p class="place-feature__eyebrow">ACTON &middot; 1959</p>
+        </div>
+        <h2 id="featured-place" class="place-feature__title">The Shine Dome.</h2>
+        <p class="place-feature__desc">The dome's copper roof is reaching the end of its serviceable life. The Academy is fundraising for a full restoration using techniques compatible with the 1959 original.</p>
+        <div class="place-feature__actions">
+          <a class="btn btn--strong" href="place-detail.html">Read the brief</a>
+          <a class="link-arrow link-arrow--ink" href="get-involved.html#support">Support the campaign <span class="arrow" aria-hidden="true">&#x2197;</span></a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- Search and filter both target .place-card elements via data attributes; JS handles them independently. -->
+<section class="explore-browse-controls section--page-tone" id="browse">
+  <div class="container">
+    <p class="explore-browse-controls__label eyebrow">Browse all places</p>
+    <div class="explore-controls">
+      <label class="search-bar" for="place-search">
+        <span class="search-bar__icon" aria-hidden="true">⌕</span>
+        <input id="place-search" type="search" placeholder="Search places, architects, suburbs…" data-search-input data-search-target=".place-card" />
+        <span class="sr-only">Search places</span>
+      </label>
+      <div class="chips" role="group" aria-label="Filter places by category" data-filter-group data-filter-target=".place-card">
+        <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="chip" type="button" data-filter="risk" aria-pressed="false">At Risk</button>
+        <button class="chip" type="button" data-filter="civic" aria-pressed="false">Civic</button>
+        <button class="chip" type="button" data-filter="residential" aria-pressed="false">Residential</button>
+        <button class="chip" type="button" data-filter="public" aria-pressed="false">Public Buildings</button>
+        <button class="chip" type="button" data-filter="tours" aria-pressed="false">Tours</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--band" aria-label="Browse all places">
+  <div class="container">
+    <div class="card-grid">
+
+      <article class="card place-card" data-cat="civic risk">
+        <div class="card__media">
+          <img src="assets\images\event-shine-dome.png" alt="The blue-grey dome roof of the Australian Academy of Science." loading="lazy" />
+          <span class="tag tag--atrisk">At Risk</span>
+        </div>
+        <div class="card__body">
+          <p class="card__eyebrow">ACTON &middot; 1959</p>
+          <h3 class="card__title">The Shine Dome</h3>
+          <p class="card__desc">Sir Roy Grounds' copper-clad council chamber, suspended on sixteen concrete arches.</p>
+          <div class="card__actions">
+            <a class="link-arrow link-arrow--ink" href="place-detail.html">Explore <span class="arrow" aria-hidden="true">&#x2197;</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card place-card" data-cat="residential">
+        <div class="card__media">
+          <img src="assets\images\Boyd_House.jpeg" alt="A mid-century residence with timber screens and brick chimneys." loading="lazy" />
+          <span class="tag tag--residential">Residential</span>
+        </div>
+        <div class="card__body">
+          <p class="card__eyebrow">DEAKIN &middot; 1967</p>
+          <h3 class="card__title">Boyd House II</h3>
+          <p class="card__desc">A working family home that quietly redefined Canberra domestic architecture.</p>
+          <div class="card__actions">
+            <a class="link-arrow link-arrow--ink" href="place-detail.html">Explore <span class="arrow" aria-hidden="true">&#x2197;</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card place-card" data-cat="public">
+        <div class="card__media">
+          <img src="assets\images\Cameron_offices.jpg" alt="A modernist public hall with concrete fins and large windows." loading="lazy" />
+          <span class="tag tag--public">Public</span>
+        </div>
+        <div class="card__body">
+          <p class="card__eyebrow">CIVIC &middot; 1971</p>
+          <h3 class="card__title">Cameron Offices</h3>
+          <p class="card__desc">John Andrews' striated office terraces: half restored, half awaiting heritage protection.</p>
+          <div class="card__actions">
+            <a class="link-arrow link-arrow--ink" href="place-detail.html">Explore <span class="arrow" aria-hidden="true">&#x2197;</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card place-card place-card--barton" data-cat="civic risk">
+        <div class="card__media">
+          <img src="assets\images\Edmund_Barton_Building.jpg" alt="A brutalist concrete tower beside Lake Burley Griffin." loading="lazy" />
+          <span class="tag tag--atrisk">At Risk</span>
+        </div>
+        <div class="card__body">
+          <p class="card__eyebrow">BARTON &middot; 1976</p>
+          <h3 class="card__title">Edmund Barton Building</h3>
+          <p class="card__desc">A late-modernist civic terrace currently the subject of a heritage campaign.</p>
+          <div class="card__actions">
+            <a class="link-arrow link-arrow--ink" href="place-detail.html">Explore <span class="arrow" aria-hidden="true">&#x2197;</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card place-card" data-cat="public tours">
+        <div class="card__media">
+          <img src="assets\images\story-concrete-icons.png" alt="The National Carillon's three concrete columns rising above the lake." loading="lazy" />
+          <span class="tag tag--place-tour">Tour</span>
+        </div>
+        <div class="card__body">
+          <p class="card__eyebrow">ASPEN ISLAND &middot; 1970</p>
+          <h3 class="card__title">National Carillon</h3>
+          <p class="card__desc">Cameron, Chisholm and Nicol's bell tower: three concrete shafts, fifty-five bells.</p>
+          <div class="card__actions">
+            <a class="link-arrow link-arrow--ink" href="place-detail.html">Explore <span class="arrow" aria-hidden="true">&#x2197;</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card place-card" data-cat="residential">
+        <div class="card__media">
+          <img src="assets\images\Bowden_house.jpg" alt="Interior of a mid-century residence with timber paneling." loading="lazy" />
+          <span class="tag tag--residential">Residential</span>
+        </div>
+        <div class="card__body">
+          <p class="card__eyebrow">FORREST &middot; 1962</p>
+          <h3 class="card__title">Bowden House</h3>
+          <p class="card__desc">Roy Simpson's split-level house, a study in compact suburban modernism.</p>
+          <div class="card__actions">
+            <a class="link-arrow link-arrow--ink" href="place-detail.html">Explore <span class="arrow" aria-hidden="true">&#x2197;</span></a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <p class="search-empty" data-search-empty hidden>No places match that search yet. Try a broader term, or <a href="get-involved.html#partner">tell us</a> what we should map next.</p>
+  </div>
+</section>
+
+<section class="campaign-cards section--band" aria-labelledby="campaigns-heading">
+  <div class="container">
+    <div class="campaign-cards__header">
+      <p class="eyebrow">Active Campaigns</p>
+      <h2 id="campaigns-heading" class="campaign-cards__heading">Conservation campaigns.</h2>
+      <p class="campaign-cards__intro">These campaigns show what is at risk, what needs to happen next, and how visitors can support the work.</p>
+    </div>
+    <div class="campaign-pillars">
+      <article class="campaign-pillar campaign-pillar--teal">
+        <div class="campaign-pillar__meta">
+          <span class="campaign-pillar__num" aria-hidden="true">01</span>
+          <span class="campaign-pillar__status">Fundraising open</span>
+        </div>
+        <h3 class="campaign-pillar__title">The Shine Dome</h3>
+        <p class="campaign-pillar__desc">Copper roof restoration and long-term conservation planning.</p>
+        <a class="link-arrow link-arrow--ink" href="place-detail.html">Read the brief <span class="arrow" aria-hidden="true">&#x2197;</span></a>
+      </article>
+      <article class="campaign-pillar campaign-pillar--red">
+        <div class="campaign-pillar__meta">
+          <span class="campaign-pillar__num" aria-hidden="true">02</span>
+          <span class="campaign-pillar__status">Advocacy underway</span>
+        </div>
+        <h3 class="campaign-pillar__title">Brutalist Civic Places</h3>
+        <p class="campaign-pillar__desc">Documenting Canberra's concrete civic architecture.</p>
+        <a class="link-arrow link-arrow--ink" href="get-involved.html">Get involved <span class="arrow" aria-hidden="true">&#x2197;</span></a>
+      </article>
+      <article class="campaign-pillar campaign-pillar--blue">
+        <div class="campaign-pillar__meta">
+          <span class="campaign-pillar__num" aria-hidden="true">03</span>
+          <span class="campaign-pillar__status">Research ongoing</span>
+        </div>
+        <h3 class="campaign-pillar__title">Post-war Suburban Heritage</h3>
+        <p class="campaign-pillar__desc">Recording everyday modernist homes and community spaces.</p>
+        <a class="link-arrow link-arrow--ink" href="get-involved.html#get-in-touch">Share a lead <span class="arrow" aria-hidden="true">&#x2197;</span></a>
+      </article>
+    </div>
+    <p class="campaign-cards__foot">Looking for essays, films, and tours? <a href="stories.html">View all stories &#x2197;</a></p>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__grid">
+      <div>
+        <p class="site-footer__brand">CANBERRA MODERN</p>
+        <p class="site-footer__tagline">Advocating for the conservation and celebration of Canberra's unique modernist heritage through education, participation, and events.</p>
+      </div>
+      <div>
+        <p class="site-footer__heading">Quick Links</p>
+        <ul class="site-footer__links">
+          <li><a href="events.html">Events</a></li>
+          <li><a href="explore.html">Explore</a></li>
+          <li><a href="stories.html">Stories</a></li>
+          <li><a href="get-involved.html">Get involved</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="site-footer__heading">Social</p>
+        <ul class="site-footer__links">
+          <li><a href="#" aria-label="Canberra Modern on Instagram (coming soon)">Instagram</a></li>
+          <li><a href="#" aria-label="Canberra Modern on Facebook (coming soon)">Facebook</a></li>
+          <li><a href="#" aria-label="Canberra Modern on Twitter (coming soon)">Twitter</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="site-footer__heading">Stay Informed</p>
+        <form class="site-footer__form" data-subscribe-form novalidate>
+          <label class="sr-only" for="footer-email">Email address</label>
+          <input id="footer-email" type="email" required placeholder="EMAIL ADDRESS" />
+          <button class="btn btn--primary" type="submit">Subscribe</button>
+          <p class="form-feedback" data-form-feedback role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      This website was produced by students in the Faculty of Arts &amp; Design, University of Canberra, 2026.
+    </div>
+  </div>
+</footer>
+</body>
+</html>
