@@ -2259,6 +2259,7 @@ main { flex: 1 0 auto; display: block; }
 .follow-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
 .follow-list a { font-family: var(--font-display); font-weight: var(--weight-bold); font-size: 1.25rem; display: inline-flex; align-items: center; gap: 8px; color: var(--ink-strong); }
 .follow-list a:hover { color: var(--color-red); }
+.follow-list a .arrow::after { content: "\2197\FE0E"; }
 
 /* anchor offset for sticky header */
 .involve-block,
